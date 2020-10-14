@@ -1,0 +1,12 @@
+---
+title: "Assignment"
+author: "Raymond Looney"
+date: "10/14/2020"
+output: pdf_document
+---
+
+# Raymond will add figure diagrams
+
+#Paulina will add code worked on in class
+
+# We will meet at 3 or 4pm on Sunday to finish the final question!
