@@ -10,3 +10,34 @@ output: pdf_document
 #Paulina will add code worked on in class
 
 # We will meet at 3 or 4pm on Sunday to finish the final question!
+
+
+``` {r coral}
+
+require(deSolve)
+
+# Initial values
+state <- c(X = 0.5) #fraction of total population that are conservationists
+times <- seq(0,100,by=0.1)
+
+# Parameters
+parameters <- c(k = 1.014,j = 1.68, s = 0.5, phi = 0.2, C = 0.1, P = 0.5)
+
+# Model
+consv <- function(t,state,parameters){
+  with(as.list(c(state,parameters)),{
+       dX <- k*X*(1-X)*(-1+j*(1-C)-s*P*(1-X)+phi*(2*X-1))
+      list(c(dX))   
+  })}
+
+# Solve model and plot results 
+out <- ode(y = state,times=times,func=consv,parms=parameters) 
+par(mfrow=c(1,1))
+
+plot(out[,1],out[,2],ylab='X',xlab='time',las=1)
+
+```
+
+(a) What are the long-term dynamics of the system with the default parameters given below?
+
+(b) What are the most important parameters in determining long-term dynamics? 
