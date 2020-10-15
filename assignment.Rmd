@@ -17,11 +17,11 @@ output: pdf_document
 require(deSolve)
 
 # Initial values
-state <- c(X = 0.5) #fraction of total population that are conservationists
+state <- c(X = 0.5) #proportion of total population that are conservationists
 times <- seq(0,100,by=0.1)
 
 # Parameters
-parameters <- c(k = 1.014,j = 1.68, s = 0.5, phi = 0.2, C = 0.1, P = 0.5)
+parameters <- c(k = 1.014,j = 1.68, s = 0.5, phi = 0.2, C = 0.3, P = 0.5)
 
 # Model
 consv <- function(t,state,parameters){
@@ -40,4 +40,8 @@ plot(out[,1],out[,2],ylab='X',xlab='time',las=1)
 
 (a) What are the long-term dynamics of the system with the default parameters given below?
 
+When half the population are already conservationists and live coral cover and Parrotfish abundance are both at 50%, the long-term dynamics of the system go to zero, meaning that when coral and Parrotfish are fairly healthy, fewer people will have an opinion on coral conservation. However, once live coral cover decreases to 30%, the proportion of people who become conservationists begins to increase.
+
 (b) What are the most important parameters in determining long-term dynamics? 
+
+The most important parameters in determining long-term dynamics in this system are live coral cover.
