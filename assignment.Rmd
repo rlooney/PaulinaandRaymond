@@ -11,7 +11,7 @@ output: pdf_document
 
 When we first sketched our graphs, Paulina took the approach of looking at what specifically impacts a person's opinion when considering to become a conservationist or not. Raymond looked at the entire system to explore which factors are making these decisions and impacting the socio-ecological system as a whole.
 
-```{r}
+```{r, echo= FALSE}
 require(png)
 img <- readPNG('Paulina_diagram.png',native = T)
 plot(NA,xlim=c(0,nrow(img)),ylim=c(0,ncol(img)),xaxt='n',yaxt='n',xlab='',ylab='')
@@ -20,7 +20,7 @@ rasterImage(img,0,0,nrow(img),ncol(img))
 
 Figure 1: Paulina's diagram
 
-```{r}
+```{r, echo=FALSE}
 require(png)
 img <- readPNG('Raymond_diagram.png',native = T)
 plot(NA,xlim=c(0,nrow(img)),ylim=c(0,ncol(img)),xaxt='n',yaxt='n',xlab='',ylab='')
@@ -33,7 +33,7 @@ Figure 2: Raymond's diagram
 
 When we came together to talk about what we did we both felt like Paulina did a great job added structure to the model which we used to build our final diagram. Raymond added all the extra bits and pieces that influence each mechanism indiviudally. After some painstaking drawing on an online software we were able to create the following diagram using both of our ideas.
 
-```{r}
+```{r, echo=FALSE}
 require(png)
 img <- readPNG('Final_diagram.png',native = T)
 plot(NA,xlim=c(0,nrow(img)),ylim=c(0,ncol(img)),xaxt='n',yaxt='n',xlab='',ylab='')
@@ -44,12 +44,25 @@ Figure 3: Diagram consisting of Raymond and Paulina's ideas.
 
 ## Question 3:
 
-```{r}
+We were given the following equation:
+$$\frac{dx}{dt} = kx(1-x)(-1+j(1-C)-{\sigma}P(1-x)+{\phi}(2x-1))$$
+and asked to define the variables.
+
+* k = The number of new conservationists added to the population per time step (in this case per year)
+* x = the fraction of individuals in the population willing to participate in coral conservation
+* C = live coral cover on the reef
+* P = number of parrotfish
+* j = the rate of coral degradation (caused by algae cover, disease, natural disasters, etc.)
+* $\sigma$ = Fishing rate
+* $\phi$ = The sensitivity to the norms of society. (How easily influenced an individual is by others.)
+```{r, echo=FALSE}
 require(png)
 img <- readPNG('Parameters.png',native = T)
 plot(NA,xlim=c(0,nrow(img)),ylim=c(0,ncol(img)),xaxt='n',yaxt='n',xlab='',ylab='')
 rasterImage(img,0,0,nrow(img),ncol(img))
 ```
+
+Table 1: The added in parameters of the provided differential equation.
 
 ``` {r coral}
 
