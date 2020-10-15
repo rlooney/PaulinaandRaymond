@@ -62,11 +62,20 @@ plot(NA,xlim=c(0,nrow(img)),ylim=c(0,ncol(img)),xaxt='n',yaxt='n',xlab='',ylab='
 rasterImage(img,0,0,nrow(img),ncol(img))
 ```
 
-<<<<<<< HEAD
+
 Table 1: The added in parameters of the provided differential equation.
-=======
+
+From finding out these variables and working through the differential equation we were able to create a new diagram depicting the elements involved in the equation. 
+
+```{r, echo=FALSE}
+require(png)
+img <- readPNG('Parameter_diagram.png',native = T)
+plot(NA,xlim=c(0,nrow(img)),ylim=c(0,ncol(img)),xaxt='n',yaxt='n',xlab='',ylab='')
+rasterImage(img,0,0,nrow(img),ncol(img))
+```
+Figure 4: Diagram made using the parameters we found for the differential equation
+
 ## Question 5:
->>>>>>> 49008a3696525f743746f73d6b8e071ff1065cc9
 
 ``` {r coral}
 
@@ -93,7 +102,7 @@ par(mfrow=c(1,1))
 plot(out[,1],out[,2],ylab='X',xlab='time',las=1)
 
 ```
-Figure 4. Fraction of individuals in the population willing to participate in coral conservation. 
+Figure 5. Fraction of individuals in the population willing to participate in coral conservation. 
 
 
 (a) What are the long-term dynamics of the system with the default parameters given below?
