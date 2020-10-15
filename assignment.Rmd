@@ -5,12 +5,51 @@ date: "10/14/2020"
 output: pdf_document
 ---
 
-# Raymond will add figure diagrams
+# Part A
 
-#Paulina will add code worked on in class
+## Question 1:
 
-# We will meet at 3 or 4pm on Sunday to finish the final question!
+When we first sketched our graphs, Paulina took the approach of looking at what specifically impacts a person's opinion when considering to become a conservationist or not. Raymond looked at the entire system to explore which factors are making these decisions and impacting the socio-ecological system as a whole.
 
+```{r}
+require(png)
+img <- readPNG('Paulina_diagram.png',native = T)
+plot(NA,xlim=c(0,nrow(img)),ylim=c(0,ncol(img)),xaxt='n',yaxt='n',xlab='',ylab='')
+rasterImage(img,0,0,nrow(img),ncol(img))
+```
+
+Figure 1: Paulina's diagram
+
+```{r}
+require(png)
+img <- readPNG('Raymond_diagram.png',native = T)
+plot(NA,xlim=c(0,nrow(img)),ylim=c(0,ncol(img)),xaxt='n',yaxt='n',xlab='',ylab='')
+rasterImage(img,0,0,nrow(img),ncol(img))
+```
+
+Figure 2: Raymond's diagram
+
+## Question 2:
+
+When we came together to talk about what we did we both felt like Paulina did a great job added structure to the model which we used to build our final diagram. Raymond added all the extra bits and pieces that influence each mechanism indiviudally. After some painstaking drawing on an online software we were able to create the following diagram using both of our ideas.
+
+```{r}
+require(png)
+img <- readPNG('Final_diagram.png',native = T)
+plot(NA,xlim=c(0,nrow(img)),ylim=c(0,ncol(img)),xaxt='n',yaxt='n',xlab='',ylab='')
+rasterImage(img,0,0,nrow(img),ncol(img))
+```
+
+Figure 3: Diagram consisting of Raymond and Paulina's ideas.
+
+## Question 3:
+
+```{r}
+require(png)
+img <- readPNG('Parameters.png',native = T)
+plot(NA,xlim=c(0,nrow(img)),ylim=c(0,ncol(img)),xaxt='n',yaxt='n',xlab='',ylab='')
+rasterImage(img,0,0,nrow(img),ncol(img))
+```
 
 ``` {r coral}
 
