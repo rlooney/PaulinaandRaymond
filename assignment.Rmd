@@ -1,6 +1,6 @@
 ---
-title: "Assignment"
-author: "Raymond Looney"
+title: "Coral Reef Case Study"
+author: "Raymond Looney and Paulina Murray"
 date: "10/14/2020"
 output: pdf_document
 ---
@@ -51,13 +51,15 @@ plot(NA,xlim=c(0,nrow(img)),ylim=c(0,ncol(img)),xaxt='n',yaxt='n',xlab='',ylab='
 rasterImage(img,0,0,nrow(img),ncol(img))
 ```
 
+## Question 5:
+
 ``` {r coral}
 
 require(deSolve)
 
 # Initial values
 state <- c(X = 0.5) #proportion of total population that are conservationists
-times <- seq(0,100,by=0.1)
+times <- seq(0, 100, by = 0.1)
 
 # Parameters
 parameters <- c(k = 1.014,j = 1.68, s = 0.5, phi = 0.2, C = 0.3, P = 0.5)
@@ -76,6 +78,8 @@ par(mfrow=c(1,1))
 plot(out[,1],out[,2],ylab='X',xlab='time',las=1)
 
 ```
+Figure 4. Fraction of individuals in the population willing to participate in coral conservation. 
+
 
 (a) What are the long-term dynamics of the system with the default parameters given below?
 
@@ -83,4 +87,4 @@ When half the population are already conservationists and live coral cover and P
 
 (b) What are the most important parameters in determining long-term dynamics? 
 
-The most important parameters in determining long-term dynamics in this system are live coral cover.
+The most important parameters in determining long-term dynamics in this system are live coral cover. As Parrotfish abundance decreases, the proportion of people willing to participate in coral conservation continues to decrease, therefore, it is not an important paramater.
